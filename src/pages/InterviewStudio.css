@@ -1,0 +1,199 @@
+/* Interview Studio Styles */
+.interview-layout {
+  display: flex;
+  height: calc(100vh - var(--topbar-height));
+}
+
+.interview-chat {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  border-right: 1px solid var(--color-border);
+  min-width: 0;
+}
+
+.interview-chat-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-3) var(--space-5);
+  border-bottom: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.interview-timer {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1-5);
+  font-family: var(--font-mono);
+  font-size: var(--text-sm);
+  font-weight: var(--weight-semibold);
+  color: var(--color-warning);
+}
+
+.interview-progress {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  font-size: var(--text-xs);
+  color: var(--color-text-tertiary);
+}
+
+.interview-progress-bar {
+  width: 80px;
+  height: 4px;
+  background: var(--color-surface-raised);
+  border-radius: var(--radius-full);
+  overflow: hidden;
+}
+
+.interview-progress-bar div {
+  height: 100%;
+  background: var(--color-primary);
+  border-radius: var(--radius-full);
+}
+
+.interview-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-5);
+  display: flex;
+  flex-direction: column;
+  gap: var(--space-4);
+}
+
+.interview-msg {
+  max-width: 85%;
+}
+
+.interview-msg.interviewer {
+  align-self: flex-start;
+}
+
+.interview-msg.candidate {
+  align-self: flex-end;
+}
+
+.interview-msg-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-1);
+}
+
+.interview-msg-role {
+  font-size: var(--text-xs);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-secondary);
+}
+
+.interview-msg-time {
+  font-size: var(--text-2xs);
+  color: var(--color-text-quaternary);
+  font-family: var(--font-mono);
+}
+
+.interview-msg-content {
+  font-size: var(--text-md);
+  line-height: var(--leading-relaxed);
+  color: var(--color-text-primary);
+  padding: var(--space-3) var(--space-4);
+  border-radius: var(--radius-xl);
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+}
+
+.interview-msg.candidate .interview-msg-content {
+  background: var(--color-primary-subtle);
+  border-color: rgba(79, 124, 255, 0.15);
+}
+
+.interview-input-area {
+  padding: var(--space-4) var(--space-5);
+  border-top: 1px solid var(--color-border);
+  flex-shrink: 0;
+}
+
+.interview-input-wrapper {
+  background: var(--color-surface);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-xl);
+  overflow: hidden;
+}
+
+.interview-input {
+  width: 100%;
+  padding: var(--space-3) var(--space-4);
+  font-size: var(--text-md);
+  color: var(--color-text-primary);
+  background: transparent;
+  border: none;
+  resize: none;
+  font-family: var(--font-sans);
+  line-height: var(--leading-normal);
+}
+
+.interview-input::placeholder {
+  color: var(--color-text-tertiary);
+}
+
+.interview-input-actions {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--space-2) var(--space-3);
+  border-top: 1px solid var(--color-border);
+}
+
+/* Panel */
+.interview-panel {
+  width: 380px;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.interview-panel-tabs {
+  display: flex;
+  border-bottom: 1px solid var(--color-border);
+  padding: 0 var(--space-4);
+}
+
+.interview-rubric {
+  flex: 1;
+  overflow-y: auto;
+}
+
+.interview-rubric-score {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: var(--space-6) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.interview-rubric-item {
+  padding: var(--space-3) var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+}
+
+.interview-rubric-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-size: var(--text-base);
+  font-weight: var(--weight-medium);
+  color: var(--color-text-primary);
+  margin-bottom: var(--space-1);
+}
+
+.interview-rubric-stars {
+  display: flex;
+  gap: 2px;
+}
+
+.interview-rubric-notes {
+  font-size: var(--text-sm);
+  color: var(--color-text-tertiary);
+}

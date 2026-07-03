@@ -1,0 +1,109 @@
+/* ============================================
+   Layout System (Pane-based, Full Bleed)
+   ============================================ */
+
+/* App Shell Base */
+.app-shell {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  overflow: hidden;
+}
+
+/* Main Content Area */
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  overflow: hidden;
+  position: relative;
+  background-color: var(--color-bg);
+  /* The separator between sidebar and main is handled by sidebar's right border */
+}
+
+/* Page Header (replaces top bar navigation when applicable) */
+.page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-6);
+  height: var(--topbar-height);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  flex-shrink: 0;
+}
+
+.page-header-left {
+  display: flex;
+  align-items: center;
+  gap: var(--space-4);
+}
+
+.page-header-right {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+}
+
+/* Scrollable Canvas for typical pages */
+.page-canvas {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-6);
+}
+
+/* Pane System (for dense split views like Interview/Coding) */
+.pane-layout {
+  display: flex;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+}
+
+.pane {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  overflow: hidden;
+  background: var(--color-bg);
+}
+
+.pane-primary {
+  flex: 1;
+  border-right: 1px solid var(--color-border);
+}
+
+.pane-sidebar {
+  width: 320px;
+  flex-shrink: 0;
+  background: var(--color-surface);
+}
+
+/* Grid Layouts for Inbox/Data */
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  gap: var(--space-4);
+}
+
+/* TopBar component specific */
+.topbar {
+  height: var(--topbar-height);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 var(--space-4);
+  border-bottom: 1px solid var(--color-border);
+  background: var(--color-bg);
+  flex-shrink: 0;
+}
+
+/* Centered container fallback if ever needed */
+.container-center {
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1000px;
+}
